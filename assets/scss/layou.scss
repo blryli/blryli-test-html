@@ -1,0 +1,190 @@
+@charset "UTF-8";
+// 颜色
+$mainBtn: #139bd4;
+$blueBtn: #139bd4;
+/* 距离 */
+
+.m-t-10 {
+	margin-top: 10px;
+}
+
+.m-t-20 {
+	margin-top: 20px;
+}
+
+.m-t-30 {
+	margin-top: 30px;
+}
+
+.m-b-10 {
+	margin-bottom: 10px;
+}
+
+.m-b-20 {
+	margin-bottom: 20px;
+}
+
+.m-b-30 {
+	margin-bottom: 30px;
+}
+
+.m-b-60 {
+	margin-bottom: 60px;
+}
+
+.m-l-10 {
+	margin-left: 10px;
+}
+
+.m-l-20 {
+	margin-left: 20px;
+}
+
+.m-l-30 {
+	margin-left: 30px;
+}
+
+.m-60-0 {
+	margin: 60px 0;
+}
+.p-60-0 {
+	padding: 60px 0;
+}
+
+.p-t-40 {
+	padding-top: 40px;
+}
+.p-b-60 {
+	padding-bottom: 60px;
+}
+
+.xs-p-0-10{
+	padding:  0 10px;
+}
+
+/* 浮动 */
+
+.f-l {
+	float: left;
+}
+
+.f-r {
+	float: right;
+}
+
+/* 文本对齐 */
+
+.t-a-l {
+	text-align: left;
+}
+
+.t-a-c {
+	text-align: center;
+}
+
+.t-a-r {
+	text-align: right;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+//-------------------生产机
+//按钮
+@mixin make-btn($color) {
+	color: #fff;
+	background-color: rgba($color, .8);
+	border-color: rgba($color, .8);
+	&:hover,
+	&:focus {
+		color: #fff;
+		background-color: rgba($color, .6);
+		border-color: rgba($color, .6);
+	}
+	&:active {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+	}
+}
+
+//主按钮
+.btn-main {
+	@include make-btn($mainBtn)
+}
+
+@mixin btn($color) {
+	display: inline-block;
+    line-height: 1;
+    white-space: nowrap;
+    cursor: pointer;
+    background: #fff;
+    border: 1px solid #aaa;
+    color: #606266;
+    -webkit-appearance: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    outline: 0;
+    transition: .1s;
+    padding: 8px 24px;
+    font-size: 15px;
+    border-radius: 100px;
+	&:hover {
+		color: #fff;
+		background-color: rgba($color, 1);
+		border-color: rgba($color, 1);
+		box-shadow: 3px 6px 30px rgba($color, .6);
+	}
+}
+
+//蓝按钮
+.btn-blue {
+	@include btn($blueBtn)
+}
+
+//响应式
+.xs-hide{
+	display: none;
+}
+.xs-show{
+	display: block;
+}
+.xs-t-a-l{
+	text-align: left;
+}
+
+@media (min-width: 768px) {
+	.container {
+		width: 750px;
+	}
+	.xs-p-0-10{
+		padding:  0;
+	}
+	.xs-hide{
+		display: block;
+	}
+	.xs-show{
+		display: none;
+	}
+	.xs-t-a-l{
+		text-align: right;
+	}
+}
+
+@media (min-width: 992px) {
+	.container {
+		width: 970px;
+	}
+}
+
+@media (min-width: 1200px) {
+	.container {
+		width: 1200px;
+	}
+}
+
+.is-show{
+	display: block;
+}
