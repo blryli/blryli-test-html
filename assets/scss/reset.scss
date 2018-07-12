@@ -1,0 +1,40 @@
+@charset "UTF-8";
+html {
+	box-sizing: border-box;
+	color: #333;
+}
+
+body {
+	&.overflow {
+		height: 100%;
+		overflow: hidden;
+	}
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: inherit;
+}
+
+li {
+	list-style: none;
+}
+
+a {
+	color: #333;
+	text-decoration: none;
+}
+
+a:hover {
+	color: #139bd4;
+}
+
+p {
+	line-height: 24px;
+}
+
+h1,
+h2 {
+	font-weight: normal;
+}
